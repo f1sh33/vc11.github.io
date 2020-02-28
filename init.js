@@ -1,4 +1,4 @@
-
+var news;
 fetch('https://hacker-news.firebaseio.com/v0/topstories.json')
 .then((response) => {
     return response.json()
@@ -9,7 +9,6 @@ fetch('https://hacker-news.firebaseio.com/v0/topstories.json')
 var x = 0;
 function them(){
     for (var i = 0;i < 10;i++){
-        var temp;
         var newsid = news[x++];
         var newslink = "https://hacker-news.firebaseio.com/v0/item/" + newsid + ".json"
         fetch(newslink)
