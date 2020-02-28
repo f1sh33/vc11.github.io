@@ -15,12 +15,13 @@ function them(){
         .then((response) => {return response.json()})
         .then((data) => {
             var div = document.createElement("div");
-        var a = document.createElement("a")
-        a.innerHTML = data.title;
-        a.href = data.url;
-        div.classList.add("lists")
-        div.append(a);
-        document.getElementById("container").append(div);
+            var a = document.createElement("a")
+            a.innerHTML = data.title;
+            a.href = data.url;
+            div.classList.add("lists")
+            div.append(a);
+            document.getElementById("container").append(div);
+            window.scrollTo(0,document.body.scrollHeight);
         })
     }
 }
